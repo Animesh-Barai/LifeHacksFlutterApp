@@ -87,13 +87,6 @@ class _ColorGeneratorState extends State<ColorGenerator> {
           fit: BoxFit.cover,
         ),
 
-        // Photo Indicator
-        new Positioned(
-          top: 0.0,
-          left: 0.0,
-          right: 0.0,
-        ),
-
         // Photo Controls
         _buildPhotoControls(),
       ],

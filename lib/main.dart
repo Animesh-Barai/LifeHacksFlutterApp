@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fluttery/layout.dart';
 import 'cards.dart';
 
 void main() => runApp(MyApp());
@@ -10,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -27,20 +27,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildCardStack(){
-    return new AnchoredOverlay(
-      showOverlay: true,
-      child: new Center(),
-      overlayBuilder: (BuildContext context, Rect anchorBounds, Offset anchor){
-        return CenterAbout(
-          position: anchor,
-          child: new Container(
-            width: anchorBounds.width,
-            height: anchorBounds.height,
-            padding: const EdgeInsets.all(16.0),
-            child: new Cards(),
-          ),
-        );
-      },
+    return new Center(
+      child: new Container(
+        padding: const EdgeInsets.all(16.0),
+        child: new Cards(),
+      ),
     );
   }
 
@@ -48,11 +39,25 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Image.asset("assets/logo.png"),
-        backgroundColor: Colors.transparent,
+        title: new Center(
+          child: new Image.asset("assets/logo.png"),
+        ),
+        backgroundColor: Colors.blue,
       ),
       body: _buildCardStack(),
-      bottomNavigationBar: new Text("Siddharth Notani"),
+      bottomNavigationBar: new Container(
+        height: MediaQuery.of(context).size.height/17.5,
+        child: new BottomAppBar(
+          color: Colors.white,
+          child: new Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              new Text("2019 \u00a9 Siddharth Notani")
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
+
