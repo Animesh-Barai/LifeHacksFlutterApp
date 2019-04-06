@@ -52,6 +52,13 @@ flutter:
     - assets/color2.png
     - assets/color3.png
     - assets/color4.png
+    - assets/color5.png
+    - assets/color6.png
+    - assets/color7.png
+    - assets/color8.png
+    - assets/color9.png
+    - assets/color10.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

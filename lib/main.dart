@@ -11,7 +11,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
+        primaryColor: Colors.indigo,
+        accentColor: Colors.indigoAccent,
+        brightness: Brightness.light,
       ),
       home: MyHomePage(),
     );
@@ -39,10 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: new Center(
-          child: new Image.asset("assets/logo.png"),
+        title: new Padding(
+          padding: const EdgeInsets.only(left: 50.0),
+          child: new Text("Student Life Hacks"),
         ),
-        backgroundColor: Colors.blue,
+        leading: Image.asset("assets/logo.png"),
       ),
       body: _buildCardStack(),
       bottomNavigationBar: new Container(
