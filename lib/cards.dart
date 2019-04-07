@@ -7,20 +7,14 @@ class Cards extends StatefulWidget {
 }
 
 class _CardsState extends State<Cards> {
-
   Widget _buildBackgroundColor(){
     return new ColorGenerator(
       colors: [
-        'assets/color1.png',
-        'assets/color2.png',
-        'assets/color3.png',
-        'assets/color4.png',
-        'assets/color5.png',
-        'assets/color6.png',
-        'assets/color7.png',
-        'assets/color8.png',
-        'assets/color9.png',
-        'assets/color10.png',
+        'assets/color1.png', 'assets/color2.png',
+        'assets/color3.png', 'assets/color4.png',
+        'assets/color5.png', 'assets/color6.png',
+        'assets/color7.png', 'assets/color8.png',
+        'assets/color9.png', 'assets/color10.png',
       ],
       visibleColorIndex: 0,
     );

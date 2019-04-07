@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'cards.dart';
 
 void main() => runApp(StudentLifeHacks());
 
 class StudentLifeHacks extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,13 +14,11 @@ class StudentLifeHacks extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   Widget _buildCardStack(){
     return new Center(
       child: new Container(
@@ -69,12 +65,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
                   new IconButton(
-                        icon: Icon(Icons.help),
-                        iconSize: MediaQuery.of(context).size.height/23.5,
-                        color: Colors.white,
-                        onPressed: () => {
-                          _helpDialog()
-                        }
+                      icon: Icon(Icons.help),
+                      iconSize: MediaQuery.of(context).size.height/23.5,
+                      color: Colors.white,
+                      onPressed: () => _helpDialog()
                   ),
                   new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
                 ],
@@ -84,4 +78,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
