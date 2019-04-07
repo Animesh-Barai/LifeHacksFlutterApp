@@ -7,16 +7,16 @@ class StudentLifeHacks extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
-      home: Main(),
+      home: MyHomePage(),
     );
   }
 }
 
-class Main extends StatefulWidget {
-  _MainState createState() => _MainState();
+class MyHomePage extends StatefulWidget {
+  _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MainState extends State<Main> {
+class _MyHomePageState extends State<MyHomePage> {
   Widget _buildCardStack(){
     return new Center(
       child: new Container(
