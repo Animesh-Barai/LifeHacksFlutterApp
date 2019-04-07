@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
         context: context,
         builder: (_) => new AlertDialog(
-          title: new Text("Help - Student Life Hacks"),
+          title: new Text("Help"),
           content: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
