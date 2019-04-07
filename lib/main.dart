@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'cards.dart';
 
 void main() => runApp(StudentLifeHacks());
@@ -31,6 +32,31 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  void helpDialog(){
+    showDialog(
+        context: context,
+        builder: (_) => new AlertDialog(
+          title: new Text("Help - Student Life Hacks"),
+          content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                new Text("This flutter app will show you the best life hacks for students."
+                  "\n\nTap on the right side of the picture to see the next one →"
+                  "\nTap on the left side of the picture to see the previous one ←"
+                  "\n\nFor any suggestions on more student life hacks, please email: "),
+                new InkWell(
+                  child: new Text("\ns.notani@lancaster.ac.uk", style: TextStyle(color: Colors.blue)),
+                  onTap: () async {
+                    await launch("mailto:s.notani@lancaster.ac.uk");
+                  },
+                ),
+              ],
+          ),
+        )
+
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,37 +79,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
                   new IconButton(
-                      icon: Icon(Icons.email),
+                      icon: Icon(Icons.live_help),
                       iconSize: MediaQuery.of(context).size.height/23.5,
                       color: Colors.white,
                       onPressed: () => {
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  content: Form(
-                                    child: Column(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: TextFormField(),
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: TextFormField(),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: RaisedButton(
-                                            child: Text("Submitß"),
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                );
-                              }),
+                        helpDialog()
                       }
                   ),
                   new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
