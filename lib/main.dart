@@ -40,10 +40,9 @@ class _MyHomePageState extends State<MyHomePage> {
           content: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                new Text("This flutter app will show you the best life hacks for students."
-                  "\n\nTap on the right side of the picture to see the next one →"
-                  "\nTap on the left side of the picture to see the previous one ←"
-                  "\n\nFor any suggestions on more student life hacks, please email: "),
+                new Text("Tap on the right side of the picture to see the next one →"
+                  "\n\nTap on the left side of the picture to see the previous one ←"
+                  "\n\nFor suggestions on more student life hacks, please email: "),
                 new InkWell(
                   child: new Text("\ns.notani@lancaster.ac.uk", style: TextStyle(color: Colors.blue)),
                   onTap: () async {
@@ -53,7 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
           ),
         )
-
     );
   }
 
@@ -69,8 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.redAccent,
       ),
       body: _buildCardStack(),
-      bottomNavigationBar: SafeArea(
-        child: new BottomAppBar(
+      bottomNavigationBar: new BottomAppBar(
             color: Colors.redAccent,
             child: Padding(
               padding: const EdgeInsets.all(5.0),
@@ -91,7 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ),
-      ),
     );
   }
 }

@@ -7,6 +7,7 @@ class Cards extends StatefulWidget {
 }
 
 class _CardsState extends State<Cards> {
+
   Widget _buildBackgroundColor(){
     return new ColorGenerator(
       colors: [
@@ -29,7 +30,6 @@ class _CardsState extends State<Cards> {
   Widget build(BuildContext context) {
     return new Container(
       decoration: new BoxDecoration(
-        borderRadius: new BorderRadius.circular(20.0),
         boxShadow: [
           new BoxShadow(
             color: const Color(0x11000000),
@@ -39,7 +39,7 @@ class _CardsState extends State<Cards> {
         ]
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(30.0),
         child: new Material(
           child: new Stack(
             fit: StackFit.expand,
