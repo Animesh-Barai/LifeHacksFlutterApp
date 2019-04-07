@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'cards.dart';
-import 'color_generator.dart';
 
 void main() => runApp(StudentLifeHacks());
 
@@ -10,7 +9,6 @@ class StudentLifeHacks extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
-      theme: ThemeData.light(),
       home: MyHomePage(),
     );
   }
@@ -42,13 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: new Text("Student Life Hacks"),
         ),
         leading: Image.asset("assets/logo.png"),
+        backgroundColor: Colors.redAccent,
       ),
       body: _buildCardStack(),
       bottomNavigationBar: SafeArea(
         child: new BottomAppBar(
-            color: Colors.blue,
+            color: Colors.redAccent,
             child: Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(5.0),
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
@@ -57,10 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       icon: Icon(Icons.home),
                       iconSize: MediaQuery.of(context).size.height/23.5,
                       color: Colors.white,
-                      onPressed: () => new ColorGenerator(
-                        colors: [],
-                        visibleColorIndex: 0,
-                      ).visibleColorIndex = 0
+                      onPressed: () =>
                   ),
                   new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
                 ],

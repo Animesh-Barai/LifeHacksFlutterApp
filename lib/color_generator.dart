@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColorGenerator extends StatefulWidget {
   final List<String> colors;
-  int visibleColorIndex;
+  final int visibleColorIndex;
 
   ColorGenerator({
     this.colors,
@@ -71,12 +71,10 @@ class _ColorGeneratorState extends State<ColorGenerator> {
     return new Stack(
       fit: StackFit.expand,
       children: <Widget>[
-        // Photo
         new Image.asset(
           widget.colors[visiblePhotoIndex],
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
-        // Photo Controls
         _buildPhotoControls(),
       ],
     );
