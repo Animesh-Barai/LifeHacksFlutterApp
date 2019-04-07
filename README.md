@@ -1,16 +1,19 @@
-# lifehacks_flutter_app
+# Student Life Hacks
 
-A new Flutter application for Life Hacks
+A new Flutter application for Student Life Hacks created for Flutter Create 2019
 
-## Getting Started
+This application shows the best student life hacks for studying, cooking, living etc.
+To view the life hacks tap on the right side of the picture to see the next one and 
+tap on the left side of the picture to see the previous one (just like Tinder!). 
+You can also tap on the 'Help' icon on the navigation bottom bar if you need help.
 
-This project is a starting point for a Flutter application.
+It is designed to be run on an Android platform and the total dart code is of 5112 bytes.
 
-A few resources to get you started if this is your first Flutter project:
+Any suggestions on improvement are welcome! Contact the email at the end of the page.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+## License
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+MIT License
+
+Copyright (c) 2019 Siddharth Notani - sidd9torres@gmail.com
+
