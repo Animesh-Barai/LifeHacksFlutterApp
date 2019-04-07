@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ColorGenerator extends StatefulWidget {
   final List<String> colors;
-  final int visibleColorIndex;
+  int visibleColorIndex;
 
   ColorGenerator({
     this.colors,
@@ -20,16 +20,6 @@ class _ColorGeneratorState extends State<ColorGenerator> {
   void initState() {
     super.initState();
     visiblePhotoIndex = widget.visibleColorIndex;
-  }
-
-  @override
-  void didUpdateWidget(ColorGenerator oldWidget) {
-    super.didUpdateWidget(oldWidget);
-    if (widget.visibleColorIndex != oldWidget.visibleColorIndex) {
-      setState(() {
-        visiblePhotoIndex = widget.visibleColorIndex;
-      });
-    }
   }
 
   void _prevImage() {
@@ -86,7 +76,6 @@ class _ColorGeneratorState extends State<ColorGenerator> {
           widget.colors[visiblePhotoIndex],
           fit: BoxFit.cover,
         ),
-
         // Photo Controls
         _buildPhotoControls(),
       ],

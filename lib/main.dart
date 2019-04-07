@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'cards.dart';
+import 'color_generator.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(StudentLifeHacks());
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class StudentLifeHacks extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        primaryColor: Colors.indigo,
-        accentColor: Colors.indigoAccent,
-        brightness: Brightness.light,
-      ),
+      title: 'Student Life Hacks',
+      theme: ThemeData.light(),
       home: MyHomePage(),
     );
   }
@@ -49,17 +44,29 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Image.asset("assets/logo.png"),
       ),
       body: _buildCardStack(),
-      bottomNavigationBar: new Container(
-        height: MediaQuery.of(context).size.height/17.5,
+      bottomNavigationBar: SafeArea(
         child: new BottomAppBar(
-          color: Colors.white,
-          child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              new Text("2019 \u00a9 Siddharth Notani")
-            ],
+            color: Colors.blue,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: new Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
+                  new IconButton(
+                      icon: Icon(Icons.home),
+                      iconSize: MediaQuery.of(context).size.height/23.5,
+                      color: Colors.white,
+                      onPressed: () => new ColorGenerator(
+                        colors: [],
+                        visibleColorIndex: 0,
+                      ).visibleColorIndex = 0
+                  ),
+                  new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
+                ],
+              ),
+            ),
           ),
-        ),
       ),
     );
   }
