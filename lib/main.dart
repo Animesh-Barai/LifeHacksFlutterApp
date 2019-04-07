@@ -10,12 +10,6 @@ class StudentLifeHacks extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
-      theme: ThemeData(
-        textTheme: Theme.of(context).textTheme.apply(
-          bodyColor: Colors.white,
-          displayColor: Colors.white,
-        ),
-      ),
       home: MyHomePage(),
     );
   }
@@ -38,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void helpDialog(){
+  void _helpDialog(){
     showDialog(
         context: context,
         builder: (_) => new AlertDialog(
@@ -50,9 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   "\n\nTap on the left side of the picture to see the previous one ←"
                   "\n\nFor suggestions on more student life hacks, please email: "),
                 new InkWell(
-                  child: new Text("\ns.notani@lancaster.ac.uk", style: TextStyle(color: Colors.blue)),
+                  child: new Text("\nstudentlifehacks@gmail.com", style: TextStyle(color: Colors.blue)),
                   onTap: () async {
-                    await launch("mailto:s.notani@lancaster.ac.uk");
+                    await launch("mailto:studentlifehacks@gmail.com");
                   },
                 ),
               ],
@@ -80,16 +74,16 @@ class _MyHomePageState extends State<MyHomePage> {
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  new Text("Flutter Create 2019"),
+                  new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
                   new IconButton(
-                      icon: Icon(Icons.live_help),
-                      iconSize: MediaQuery.of(context).size.height/23.5,
-                      color: Colors.white,
-                      onPressed: () => {
-                        helpDialog()
-                      }
+                        icon: Icon(Icons.live_help),
+                        iconSize: MediaQuery.of(context).size.height/23.5,
+                        color: Colors.white,
+                        onPressed: () => {
+                          _helpDialog()
+                        }
                   ),
-                  new Text("Siddharth Notani"),
+                  new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
                 ],
               ),
             ),

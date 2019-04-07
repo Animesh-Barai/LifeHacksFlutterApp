@@ -29,7 +29,7 @@ class _CardsState extends State<Cards> {
   @override
   Widget build(BuildContext context) {
     return new Container(
-      decoration: new BoxDecoration(
+      /*decoration: new BoxDecoration(
         boxShadow: [
           new BoxShadow(
             color: const Color(0x11000000),
@@ -37,7 +37,7 @@ class _CardsState extends State<Cards> {
             spreadRadius: 7.0,
           ),
         ]
-      ),
+      ),*/
       child: ClipRRect(
         borderRadius: BorderRadius.circular(30.0),
         child: new Material(
