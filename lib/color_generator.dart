@@ -69,7 +69,6 @@ class _ColorGeneratorState extends State<ColorGenerator> {
   @override
   Widget build(BuildContext context) {
     return new Stack(
-      fit: StackFit.expand,
       children: <Widget>[
         new Image.asset(
           widget.colors[visiblePhotoIndex],

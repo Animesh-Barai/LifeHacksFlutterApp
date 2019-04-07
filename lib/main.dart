@@ -43,12 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 new Text("Tap on the right side of the picture to see the next one →"
                   "\n\nTap on the left side of the picture to see the previous one ←"
                   "\n\nFor suggestions on more student life hacks, please email: "),
-                new InkWell(
-                  child: new Text("\nstudentlifehacks@gmail.com", style: TextStyle(color: Colors.blue)),
-                  onTap: () async {
-                    await launch("mailto:studentlifehacks@gmail.com");
-                  },
-                ),
               ],
           ),
         )
@@ -60,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: new Padding(
-          padding: const EdgeInsets.only(left: 50.0),
+          padding: const EdgeInsets.only(left: 55.0),
           child: new Text("Student Life Hacks"),
         ),
         leading: Image.asset("assets/logo.png"),
@@ -76,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
                   new IconButton(
-                        icon: Icon(Icons.live_help),
+                        icon: Icon(Icons.help),
                         iconSize: MediaQuery.of(context).size.height/23.5,
                         color: Colors.white,
                         onPressed: () => {
