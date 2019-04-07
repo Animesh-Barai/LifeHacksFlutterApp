@@ -7,16 +7,16 @@ class StudentLifeHacks extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
-      home: MyHomePage(),
+      home: Main(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  _MyHomePageState createState() => _MyHomePageState();
+class Main extends StatefulWidget {
+  _MainState createState() => _MainState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MainState extends State<Main> {
   Widget _buildCardStack(){
     return new Center(
       child: new Container(
@@ -31,13 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
         context: context,
         builder: (_) => new AlertDialog(
           title: new Text("Help"),
-          content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                new Text("Tap on the right side of the picture to see the next one →"
+          content: new Text("Tap on the right side of the picture to see the next one →"
                   "\n\nTap on the left side of the picture to see the previous one ←"),
-              ],
-          ),
         )
     );
   }
