@@ -10,6 +10,12 @@ class StudentLifeHacks extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
+      theme: ThemeData(
+        textTheme: Theme.of(context).textTheme.apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white,
+        ),
+      ),
       home: MyHomePage(),
     );
   }
@@ -74,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: new Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
+                  new Text("Flutter Create 2019"),
                   new IconButton(
                       icon: Icon(Icons.live_help),
                       iconSize: MediaQuery.of(context).size.height/23.5,
@@ -83,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         helpDialog()
                       }
                   ),
-                  new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
+                  new Text("Siddharth Notani"),
                 ],
               ),
             ),
