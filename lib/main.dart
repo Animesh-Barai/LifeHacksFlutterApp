@@ -32,28 +32,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  /*void _helpDialog(){
-    showDialog(
-        context: context,
-        builder: (_) => new AlertDialog(
-          title: new Text("Help - Student Life Hacks"),
-          content: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                new Text("Tap on the right side of the picture to see the next one →"
-                  "\n\nTap on the left side of the picture to see the previous one ←"
-                  "\n\nFor suggestions on more student life hacks, please email: "),
-                new InkWell(
-                  child: new Text("\nstudentlifehacks@gmail.com", style: TextStyle(color: Colors.blue)),
-                  onTap: () async {
-                    await launch("mailto:studentlifehacks@gmail.com");
-                  },
-                ),
-              ],
-          ),
-        )
-    );
-  }*/
 
   @override
   Widget build(BuildContext context) {
