@@ -53,10 +53,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: <Widget>[
                   new Text("Flutter Create 2019", style: TextStyle(color: Colors.white)),
                   new IconButton(
-                      icon: Icon(Icons.home),
+                      icon: Icon(Icons.email),
                       iconSize: MediaQuery.of(context).size.height/23.5,
                       color: Colors.white,
-                      onPressed: () =>
+                      onPressed: () => {
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  content: Form(
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: TextFormField(),
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: TextFormField(),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: RaisedButton(
+                                            child: Text("Submitß"),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }),
+                      }
                   ),
                   new Text("Siddharth Notani", style: TextStyle(color: Colors.white)),
                 ],
