@@ -4,7 +4,6 @@ import 'cards.dart';
 void main() => runApp(StudentLifeHacks());
 
 class StudentLifeHacks extends StatelessWidget {
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
@@ -14,7 +13,6 @@ class StudentLifeHacks extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -44,7 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(

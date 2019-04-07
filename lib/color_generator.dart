@@ -9,14 +9,12 @@ class ColorGenerator extends StatefulWidget {
     this.visibleColorIndex,
   });
 
-  @override
   _ColorGeneratorState createState() => _ColorGeneratorState();
 }
 
 class _ColorGeneratorState extends State<ColorGenerator> {
   int visiblePhotoIndex;
 
-  @override
   void initState() {
     super.initState();
     visiblePhotoIndex = widget.visibleColorIndex;
@@ -66,7 +64,6 @@ class _ColorGeneratorState extends State<ColorGenerator> {
     );
   }
 
-  @override
   Widget build(BuildContext context) {
     return new Stack(
       children: <Widget>[

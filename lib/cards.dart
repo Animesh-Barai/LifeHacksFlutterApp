@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'color_generator.dart';
 
 class Cards extends StatefulWidget {
-  @override
   _CardsState createState() => _CardsState();
 }
 
@@ -20,7 +19,6 @@ class _CardsState extends State<Cards> {
     );
   }
 
-  @override
   Widget build(BuildContext context) {
     return new Container(
       child: ClipRRect(
