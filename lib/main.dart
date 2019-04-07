@@ -32,7 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (_) => new AlertDialog(
           title: new Text("Help"),
           content: new Text("Tap on the right side of the picture to see the next one →"
-                  "\n\nTap on the left side of the picture to see the previous one ←"),
+                  "\n\nTap on the left side of the picture to see the previous one ←"
+                  "\n\nFor suggestions, email: studentlifehacks@gmail.com"),
         )
     );
   }
