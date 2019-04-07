@@ -34,7 +34,7 @@ class _ColorGeneratorState extends State<ColorGenerator> {
     });
   }
 
-  Widget _buildPhotoControls() {
+  Widget _buildControls() {
     return new Stack(
       fit: StackFit.expand,
       children: <Widget>[
@@ -71,7 +71,7 @@ class _ColorGeneratorState extends State<ColorGenerator> {
           widget.colors[visiblePhotoIndex],
           fit: BoxFit.contain,
         ),
-        _buildPhotoControls(),
+        _buildControls(),
       ],
     );
   }

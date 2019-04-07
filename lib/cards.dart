@@ -6,6 +6,7 @@ class Cards extends StatefulWidget {
 }
 
 class _CardsState extends State<Cards> {
+
   Widget _buildBackgroundColor(){
     return new ColorGenerator(
       colors: [

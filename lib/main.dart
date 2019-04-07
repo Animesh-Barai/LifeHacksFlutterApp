@@ -4,6 +4,7 @@ import 'cards.dart';
 void main() => runApp(StudentLifeHacks());
 
 class StudentLifeHacks extends StatelessWidget {
+
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Student Life Hacks',
@@ -17,6 +18,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   Widget _buildCardStack(){
     return new Center(
       child: new Container(
